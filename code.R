@@ -13,8 +13,6 @@ keggtab <- data.table::fread("Pichia.blastkoala.txt",
                              sep="\t",
                              na.strings="")
 
-
-
 tab<-rtracklayer::readGFF("reference_cbs7435/CBS7435_21102016.gff3",
                           tags =c("ID",
                                   "Parent",
@@ -35,8 +33,7 @@ colnames(tab)<-c("ID",
                  "locus_tag",
                  "product",
                  "protein_id",
-                 "inference"
-)
+                 "inference")
 
 write.csv("annot.csv",
           tab,quote=F,
